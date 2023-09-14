@@ -1,0 +1,17 @@
+@font-face {
+    font-family: JockeyOne;
+    src: url('JockeyOne-Regular.ttf');
+}
+
+.font-jockey {
+    font-family: JockeyOne;
+}
+
+@font-face {
+    font-family: Staatliches;
+    src: url('Staatliches-Regular.ttf');
+}
+
+.font-staatliches {
+    font-family: Staatliches;
+}

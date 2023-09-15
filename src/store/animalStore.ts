@@ -1,7 +1,8 @@
 import {createSlice, Slice} from "@reduxjs/toolkit";
 import parseCSVData from "../services/animalService";
 
-const animalSlice: Slice<StoreState, { init: (state) => void; addGuess: (state, action) => void; selectRandomAnimal: (state) => void }, string> = createSlice({
+// @ts-ignore
+const animalSlice: Slice<StoreState, { init: (state: any) => void; addGuess: (state: any, action: any) => void; selectRandomAnimal: (state: any) => void }, string> = createSlice({
     name: "animalStore",
     initialState: {
         animals: [] as Animal[],
@@ -18,7 +19,7 @@ const animalSlice: Slice<StoreState, { init: (state) => void; addGuess: (state, 
             }
             console.log("Store initialised")
         },
-        addGuess: (state, action) => {
+        addGuess: (state, action: {payload: string}) => {
             if (!state.guesses.includes(action.payload)) {
                 state.guesses.push(action.payload);
             }
@@ -31,7 +32,7 @@ const animalSlice: Slice<StoreState, { init: (state) => void; addGuess: (state, 
             console.log("Selected random animal: ", state.targetAnimal.specie)
             state.guesses = []
         },
-        reset: (state) => {
+        reset: (state: any) => {
             animalSlice.caseReducers.selectRandomAnimal(state)
             state.guesses = []
         }

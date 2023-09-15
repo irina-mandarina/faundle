@@ -6,7 +6,6 @@ import {addGuess, init, selectRandomAnimal} from "../store/animalStore";
 import SearchBar from "../components/SearchBar";
 import {useEffect} from "react";
 import AnimalRow from "../components/AnimalRow";
-import SearchResult from "../components/SearchResult";
 import PlayAgainButton from "../components/PlayAgainButton";
 
 
@@ -21,6 +20,7 @@ const PlayPage: React.FC<PageProps> = () => {
     const guesses = useSelector((state: any) => state.animalStore.guesses);
 
     const handleSelect = (animalSpecie: string) => {
+        // @ts-ignore
         dispatch(addGuess(animalSpecie))
     }
 

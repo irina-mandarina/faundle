@@ -1,5 +1,4 @@
 import animalsCSV from "../animals";
-import Animal from "../models/animal";
 
 function parseCSVData(): Animal[] {
     let result = []

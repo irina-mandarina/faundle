@@ -1,5 +1,30 @@
 html, main, body, #___gatsby, #gatsby-focus-wrapper {
     width: 100%;
     height: 100%;
-    color: beige;
+    color: #d6d6d6;
+}
+     /* width */
+::-webkit-scrollbar {
+    width: 20px;
+    margin: 20px;
+    padding: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #d6d6d6;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #03243a;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #011928;
+    filter: drop-shadow(0 20px 20px rgba(90, 133, 168, 0.79));
+    transition: all 400ms ease-in-out;
 }

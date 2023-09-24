@@ -16,3 +16,8 @@ type SearchResultProps = {
 type AnimalRowProps = {
     animalSpecie: string
 }
+
+type CharacteristicBalloonProps = {
+    characteristicValue: string
+    correct: boolean
+}

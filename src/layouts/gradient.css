@@ -1,35 +1,30 @@
-/*.bg-animation {*/
-/*    position: fixed;*/
-/*    top: 0;*/
-/*    left: 0;*/
-/*    width: 100%;*/
-/*    height: 100%;*/
-/*    z-index: -1;*/
-/*    background-color: #0b293a;*/
-/*    animation: moveGradient 6s ease-in-out infinite;*/
-/*    background-image:*/
-/*            radial-gradient(circle, hsl(199, 94%, 14%), transparent),*/
-/*            radial-gradient(circle, hsl(191, 65%, 22%), transparent),*/
-/*            radial-gradient(circle, hsl(202, 68%, 14%), transparent),*/
-/*            radial-gradient(circle, hsl(174, 60%, 17%), transparent);*/
-/*    background-size: 300% 300%; !* Increase the size for faster movement *!*/
-/*}*/
+#animated-gradient-mask {
+    background: linear-gradient(-45deg, #0d163b, #0a3d46, #0d3f37, #10342b);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+    mask-image: url(FAUNDLE.png);
+    -webkit-mask-image: url(FAUNDLE.png);
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    text-align: center;
+    inset: 10%;
+    mask-size: 80%;
+    height: 80%;
+    width: 100%;
+    margin: auto;
+    position: fixed;
+    opacity: 80%;
+    z-index: -1;
+}
 
-/*@keyframes moveGradient {*/
-/*    0% {*/
-/*        background-position: 0% 0%, 0% 0%;*/
-/*    }*/
-/*    100% {*/
-/*        background-position: 100% 100%, 100% 100%;*/
-/*    }*/
-/*}*/
-
-
-#gradient-canvas {
-    width:100%;
-    height:100%;
-    --gradient-color-1: #0f314d;
-    --gradient-color-2: #23464d;
-    --gradient-color-3: #12634f;
-    --gradient-color-4: #235b86;
+@keyframes gradient {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
 }

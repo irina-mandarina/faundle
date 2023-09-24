@@ -12,7 +12,7 @@ const PlayAgainButton: React.FC = ( props, context ) => {
                 top: 0,
                 left: 0
             }}>
-                <div class="mx-auto my-auto">
+                <div className="mx-auto my-auto">
                     <div className="p-4 bg-amber-900 rounded shadow">
                         You won!
                     </div>

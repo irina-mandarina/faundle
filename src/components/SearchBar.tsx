@@ -25,13 +25,13 @@ const SearchBar: React.FC<SearchBarProps> = ( props: SearchBarProps) => {
         props.onSelect(animalSpecie)
     }
 
-    return <div>
+    return <div className="mx-auto w-1/3 m-3">
         <input
             value={inputValue}
             onChange={onInputChange}
             type="text"
             placeholder="Guess the animal"
-            className="text-blue-950 bg-green-50 focus:outline-none focus:drop-shadow-md"
+            className="font-staatliches text-blue-950 p-2 w-full rounded-tl-xl rounded-br-xl bg-[#D9D9D9] bg-green-50 focus:outline-none focus:drop-shadow-[0_1rem_1rem_rgba(217,217,217,0.2)] duration-300 "
         />
 
         {

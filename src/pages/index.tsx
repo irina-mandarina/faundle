@@ -10,21 +10,17 @@ const IndexPage: React.FC<PageProps> = () => {
         <Layout>
             <main
                 className="flex flex-col w-full h-full">
-                <div className="mx-auto font-jockey">
+                <div className="mx-auto font-jockey text-[90pt] p-8">
                     FAUNDLE
                 </div>
-                <div className="flex flex-col mx-auto">
+                <div className="flex flex-col mx-auto justify-center w-1/8">
                     <MainScreenButton
-                        className="mx-auto my-4"
                         text="play" link="/play" />
                     <MainScreenButton
-                        className="mx-auto my-4"
                         text="how to play" link="/how-to-play" />
                     <MainScreenButton
-                        className="mx-auto my-4"
                         text="settings" link="/settings" />
                     <MainScreenButton
-                        className="mx-auto my-4"
                         text="about" link="/about" />
                 </div>
             </main>

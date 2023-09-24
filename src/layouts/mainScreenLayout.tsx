@@ -9,12 +9,12 @@ const Layout: React.FC<{ children: any }> = (props) => {
         "#0c563e",
         "#185c45",
         "#184c5c",
-        "rgba(6,162,209,0.68)",
-        "rgba(67,165,196,0.83)",
+        "rgba(6,162,209,0.5)",
+        "rgba(67,165,196,0.5)",
         "#171b82",
-        "#4f52b8",
-        "rgba(28,110,67,0.82)",
-        "#085940",
+        "rgba(60,48,112,0.76)",
+        "rgba(28,110,67,0.5)",
+        "rgba(5,73,52,0.76)",
         "#1b4f4d",
         "#0a3548",
     ];
@@ -32,6 +32,13 @@ const Layout: React.FC<{ children: any }> = (props) => {
             });
         }
         setMeshes(initMeshes);
+        setMeshes((prevMeshes) =>
+            prevMeshes.map((mesh) => ({
+                ...mesh,
+                x: getRandomInt(1, 100),
+                y: getRandomInt(1, 100),
+            }))
+        );
     }, []);
 
     useEffect(() => {
@@ -43,19 +50,25 @@ const Layout: React.FC<{ children: any }> = (props) => {
                     y: getRandomInt(1, 100),
                 }))
             );
-        }, 10000); // Decreased the interval to 1 second for testing
+        }, 5000); // Decreased the interval to 1 second for testing
 
         return () => clearInterval(intervalId);
     }, []);
 
     return (
-        <div className="w-full h-full">
+        <div className="w-full h-full relative">
+
+            <main style={{
+                zIndex: 10000
+            }}>{props.children}</main>
             <div
-                className="fixed absolute w-full h-full -z-100"
+                className="w-full h-full"
                 style={{
                     top: 0,
                     left: 0,
-                    backgroundColor: '#0a3548'
+                    backgroundColor: '#0a3548',
+                    position: "fixed",
+                    zIndex: -1
                 }}
             >
                 {meshes.map((mesh, index) => (
@@ -67,9 +80,10 @@ const Layout: React.FC<{ children: any }> = (props) => {
                             width: `${mesh.width}px`,
                             height: `${mesh.height}px`,
                             borderRadius: "100%",
-                            transform: `translate(${mesh.x}%, ${mesh.y}%)`, // Removed the *0.01 multiplier
-                            transition: "transform 9s ease-in-out", // Added a transition for smooth movement
-                            filter: 'blur(1.5rem)'
+                            transform: `translate(${mesh.x}%, ${mesh.y}%)`,
+                            transition: "transform 4s ease-in-out",
+                            filter: 'blur(3rem)',
+                            zIndex: -1,
                         }}
                     >
                         <div style={{
@@ -80,14 +94,14 @@ const Layout: React.FC<{ children: any }> = (props) => {
                             borderRadius: "100%",
                             transform: `translate(${mesh.x}%, ${mesh.y}%)`, // Removed the *0.01 multiplier
                             transition: "transform 9s ease-in-out", // Added a transition for smooth movement
-                            filter: 'blur(1.5rem)'
+                            filter: 'blur(2rem)',
+                            zIndex: -1,
                         }}>
                         </div>
                     </div>
                 ))}
             </div>
 
-            <main>{props.children}</main>
         </div>
     );
 };

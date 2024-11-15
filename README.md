@@ -1,5 +1,4 @@
-# Animal Wordle Game
-
+# Faundle
 A fun and educational Wordle-inspired game where players guess animals based on their characteristics. Instead of letters, players receive "yes" or "no" feedback for each guess based on attributes such as Category, Habitat, Diet, Number of Legs, Way of Moving, Social Behavior, and Outer Layer. Built with Gatsby and React, with state management powered by Redux.
 
 ## Table of Contents

@@ -12,7 +12,7 @@ A fun and educational Wordle-inspired game where players guess animals based on 
 - Guess the Animal: Players try to identify the correct animal based on a set of characteristics.
 - Feedback System: Receive "Yes" or "No" for each guessed attribute to narrow down options.
 - Educational Fun: Learn interesting facts about animals while playing.
-- Responsive Design: Optimized for both desktop and mobile devices.
+- Beautiful UI
 
 ## Tech Stack
 - Frontend: Gatsby.js (React-based framework)

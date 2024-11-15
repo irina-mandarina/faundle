@@ -4,7 +4,6 @@ A fun and educational Wordle-inspired game where players guess animals based on 
 ## Table of Contents
 - Features
 - Tech Stack
-- Setup
 - Gameplay
 
 ## Features

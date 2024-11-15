@@ -1,49 +1,32 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby Minimal TypeScript Starter
-</h1>
+# Animal Wordle Game
 
-## 🚀 Quick start
+A fun and educational Wordle-inspired game where players guess animals based on their characteristics. Instead of letters, players receive "yes" or "no" feedback for each guess based on attributes such as Category, Habitat, Diet, Number of Legs, Way of Moving, Social Behavior, and Outer Layer. Built with Gatsby and React, with state management powered by Redux.
 
-1.  **Create a Gatsby site.**
+## Table of Contents
+- Features
+- Tech Stack
+- Setup
+- Gameplay
 
-    Use the Gatsby CLI to create a new site, specifying the minimal TypeScript starter.
+## Features
+- Guess the Animal: Players try to identify the correct animal based on a set of characteristics.
+- Feedback System: Receive "Yes" or "No" for each guessed attribute to narrow down options.
+- Educational Fun: Learn interesting facts about animals while playing.
+- Responsive Design: Optimized for both desktop and mobile devices.
 
-    ```shell
-    # create a new Gatsby site using the minimal TypeScript starter
-    npm init gatsby -- -ts
-    ```
+## Tech Stack
+- Frontend: Gatsby.js (React-based framework)
+- State Management: Redux
+- Styling: Tailwind CSS
 
-2.  **Start developing.**
-
-    Navigate into your new site’s directory and start it up.
-
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
-
-3.  **Open the code and start customizing!**
-
-    Your site is now running at http://localhost:8000!
-
-    Edit `src/pages/index.tsx` to see your site update in real-time!
-
-4.  **Learn more**
-
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Tutorials](https://www.gatsbyjs.com/docs/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Guides](https://www.gatsbyjs.com/docs/how-to/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-## 🚀 Quick start (Netlify)
-
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
-
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)
+## Gameplay
+- Start the game and guess an animal.
+#### For each guess, the game provides feedback on the following characteristics:
+- Category (e.g., Mammal, Bird, Reptile)
+- Habitat (e.g., Forest, Desert, Ocean)
+- Diet (e.g., Herbivore, Carnivore, Omnivore)
+- Number of Legs (e.g., 2, 4, 6, 8)
+- Way of Moving (e.g., Flying, Swimming, Walking)
+- Social Behavior (e.g., Solitary, Pack, Herd)
+- Outer Layer (e.g., Fur, Feathers, Scales)
+- Narrow down your options based on the feedback until you identify the correct animal.
